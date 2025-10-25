@@ -58,3 +58,88 @@
     border-radius: 4px;
     cursor: pointer;
   }
+
+
+
+
+/* nav bar styling / animation -- overlay menu */
+.overlay {
+  height: 0;
+  width: 100%; 
+  position: fixed; 
+  /* Z-index 1 is too low; raise it high to ensure it covers all content */
+  z-index: 100; 
+  left: 0;
+  top: 0;
+  
+  background-color: var(--color-background); 
+  opacity: 0.98;
+  overflow-y: hidden;
+  transition: 0.5s; 
+}
+
+/* Position content inside overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; 
+  transform: translateY(-50%); /* center content vertically */
+  width: 100%; 
+  text-align: center;
+}
+
+/* nav links inside overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  
+  /* theme-aware link color */
+  color: var(--color-text-base); /* text color changes w theme */
+  
+  display: block; 
+  transition: 0.3s; 
+}
+
+/* When you mouse over the navigation links, change link color */
+.overlay a:hover, .overlay a:focus {
+  /* Use the primary color for clear link highlighting */
+  color: var(--color-primary); 
+}
+
+/* position close button to top right corner */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* Media query for small screens */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+/* new button wrapper */
+.nav-wrapper {
+  /* Flexbox on container to manage horiz position */
+  display: flex;
+  
+  /* push menu button to far right */
+  justify-content: flex-end; 
+  
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+}
+
+.menu-button {
+  font-size: 50px;
+  cursor: pointer;
+  color: var(--color-text-base); 
+}
