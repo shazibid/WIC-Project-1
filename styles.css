@@ -21,7 +21,7 @@
     --color-border: #30363d;         /* Dark border */
   }
   
-  /* --- 3. Global Styles using Variables --- */
+  /* Global Styles using Variables */
   body {
     font-family: sans-serif;
     color: var(--color-text-base);
