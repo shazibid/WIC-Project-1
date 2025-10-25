@@ -4,7 +4,7 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "dev": "live-server"
+    "dev": "npx live-server"
   },
   
   "keywords": [],
