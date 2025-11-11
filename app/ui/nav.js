@@ -1,40 +1,52 @@
 // component has event handlers (onClick)
 // + interacts w DOM (openNav/closeNav, which must be defined in script.js)
-'use client'; 
+'use client';
 
+import React, { useState } from 'react';
 import Link from 'next/link';
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  // open + close overlay
+  const openNav = () => setIsOpen(true);
+  const closeNav = () => setIsOpen(false);
+
+  const navStyle = {
+    height: isOpen ? '100%' : '0%', // control overlay height/animation
+  };
+
   return (
     <>
       {/* --- NAVBAR --- */}
-      <div id="myNav" className="overlay">
+      <div id="myNav" className="overlay" style={navStyle}> 
+        
         <a 
           href="javascript:void(0)" 
           className="closebtn" 
-          onClick={() => window.closeNav()} // call global func
+          onClick={closeNav}
         >
           &times;
         </a>
     
         {/* Overlay content */}
         <div className="overlay-content">
-          {/* internal nav */}
-          <Link href="/">Home</Link>
-          <Link href="/pets">Pets</Link>
-          <Link href="/about">About</Link>
+          {/* onClick={closeNav} so menu closes when user navigates */}
+          <Link href="/" onClick={closeNav}>Home</Link>
+          <Link href="/pets" onClick={closeNav}>Pets</Link>
+          <Link href="/about" onClick={closeNav}>About</Link>
         </div>
       </div>
     
-      {/* open overlay nav */}
+      {/* hamburger button */}
       <div className="nav-wrapper">
         <span 
           className="menu-button" 
-          onClick={() => window.openNav()}
+          onClick={openNav}
         >
           &#9776;
         </span>
       </div>
     </>
   );
-}
+  }
