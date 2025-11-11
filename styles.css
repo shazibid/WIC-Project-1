@@ -76,6 +76,7 @@
   opacity: 0.98;
   overflow-y: hidden;
   transition: 0.5s; 
+  z-index: 100;
 }
 
 /* Position content inside overlay */
