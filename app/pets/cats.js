@@ -21,3 +21,18 @@ export default function CatsPage() {
     </>
   );
 }
+
+// cats
+// cats pesonalities and traits and breeds and lifespan
+// cats eating what to eat what not to eat
+// cat anatomy (very basic)
+// where they like to be pet maybe??
+// how to take care of cat
+// what do cats like
+// how to tell if cat likes you
+
+// do the same for dogs
+
+// maybe a page for adoption / buying pet resources
+// recommended links page ^^ for this + any other important stuff for like parents idk
+// basically all sources ^
