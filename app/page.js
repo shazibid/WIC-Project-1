@@ -1,37 +1,47 @@
 import Navbar from './ui/nav';
 import Image from 'next/image';
 import ThemeSwitcher from './ui/themeSwitcher';
+import './stylesHome.css'; {/*This is for Style.*/}
 
 export default function HomePage() {
   return (
-    <>
-      <Navbar />
-      
+    <div>
+      {/*Importing Fonts*/}
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+      </style>
+
+      {/*Navigation Bar Button*/}
+      <Navbar/>
+
       {/* --- HEADINGS --- */}
       <header className="container">
-        <h1>Welcome to Project Title!</h1>
-        <h3 className="header-item">Short description about topic</h3>
-        <ThemeSwitcher />
-        
-        {/* move 'your-image.jpg' to 'public' folder */}
+        <h1>Pet Hub</h1>
+        <h3>Not sure what's the best care for your pet? We got you.</h3>
+
+        {/*Light/Dark Mode Button*/}
+        <ThemeSwitcher/>
+
+        {/* Move "your-image.jpg" to "public" folder */}
         <Image 
-            src="/your-image.jpg" 
-            alt="Header Image" 
-            className="header-item"
-            width={500} // Example width/height - set to actual dimensions
-            height={300}
-            priority // load important image first
+          src="/catdog.jpg"
+          alt="Header Image" 
+          className="header-item"
+          width={500} //Width / Height - Set to actual dimensions.
+          height={300}
+          priority //Load important image first
         /> 
       </header>
 
       {/* --- MAIN CONTENT --- */}
       <div className="card">
-        <h2>animal 1</h2>
+        <h2>Cats</h2>
         <p>placeholder for main content</p>
       </div>
 
       <div className="card">
-        <h2>animal 2</h2>
+        <h2>Dogs</h2>
         <p>placeholder for main content</p>
       </div>
 
@@ -57,6 +67,6 @@ export default function HomePage() {
       <h2>Additional Resources!</h2>
       <h3>Where can you learn more about this topic?</h3>
       <a href="https://www.example.com/" target="_blank" rel="noopener noreferrer"> Visit this website!</a>
-    </>
+    </div>
   );
 }
