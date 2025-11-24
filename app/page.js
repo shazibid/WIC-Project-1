@@ -1,6 +1,7 @@
 import './stylesHome.css'; {/*This is for Style.*/}
 import Navbar from './ui/nav';
 import ThemeSwitcher from './ui/themeSwitcher';
+import Footer from './ui/footer';
 import Link from 'next/link';
 
 export default function HomePage() {

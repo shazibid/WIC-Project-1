@@ -152,6 +152,7 @@ h3 {
   text-align: center;
   color: var(--color-text-light);
   background-color: var(--color-primary);
+  padding: 5px;
 }
 
 /* COPIED OVER TO FROM OLD STYLE.CSS FILE. */
