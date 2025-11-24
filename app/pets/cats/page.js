@@ -8,7 +8,7 @@ export default function CatsPage() {
       
       <header className="container">
         <h1>Feline Friends (Cats)</h1>
-        <p>cats cats cats</p>
+        <p>add a bunch of buttons here</p>
       </header>
 
       <section>
