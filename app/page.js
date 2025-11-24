@@ -1,62 +1,70 @@
+import './stylesHome.css'; {/*This is for Style.*/}
 import Navbar from './ui/nav';
-import Image from 'next/image';
 import ThemeSwitcher from './ui/themeSwitcher';
+import Link from 'next/link';
 
 export default function HomePage() {
   return (
-    <>
-      <Navbar />
-      
+    <div>
+      {/*Importing Fonts*/}
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+      </style>
+
       {/* --- HEADINGS --- */}
-      <header className="container">
-        <h1>Welcome to Project Title!</h1>
-        <h3 className="header-item">Short description about topic</h3>
-        <ThemeSwitcher />
+      <header>
+        <div className="veryTop">
+          {/* Light/Dark Mode Button */}
+          <div className="themeSwitch"><ThemeSwitcher/></div>
+          {/* Navigation Bar Button */}
+          <div><Navbar/></div>
+        </div>
         
-        {/* move 'your-image.jpg' to 'public' folder */}
-        <Image 
-            src="/your-image.jpg" 
-            alt="Header Image" 
-            className="header-item"
-            width={500} // Example width/height - set to actual dimensions
-            height={300}
-            priority // load important image first
+        <h1>Pet Hub</h1>
+        <h2>Not sure what's the best care for your pet? We got you.</h2>
+
+        {/* Move "your-image.jpg" to "public" folder */}
+        <img 
+          src="homeBanner.jpeg"
+          alt="Header Image" 
+          className="homeImage"
+          priority="true" //Load important image first
         /> 
       </header>
 
       {/* --- MAIN CONTENT --- */}
-      <div className="card">
-        <h2>animal 1</h2>
-        <p>placeholder for main content</p>
-      </div>
+      <h2>Click on a card to learn more.</h2>
 
-      <div className="card">
-        <h2>animal 2</h2>
-        <p>placeholder for main content</p>
+      <div className='cardSection'>
+        <Link className="petCard" href="/pets">
+          <h3>Cats</h3>
+          <img src="miltonCat.jpeg"></img>
+          <p>
+            Image Source: Milton, a very gentle boy from the San Diego Humane Society. 
+            He's looking to be adopted!
+          </p>
+        </Link>
+
+        <Link className="petCard" href="/pets">
+          <h3>Dogs</h3>
+          <img src="mulliganDog.jpeg"></img>
+          <p>
+            Image Source: Mulligan, a goofy boy from the San Diego Humane Society.
+            He's looking to be adopted!
+          </p>
+        </Link>
       </div>
+      
 
       {/* --- ABOUT --- */}
-      <h2>About My Topic</h2>
-      <p>What is this website trying to educate others on? Who is the audience?</p>
-  
-      {/* --- DATA --- */}
-      <h3>Data about my topic</h3>
-      {/* content */}
-      {/* <Image src="/chart-image.png" alt="Data Chart" width={600} height={400} /> */}
-      <h4>Add some charts + captions that illustrate my topic and some interesting facts</h4>
-  
-      <ul>
-          <li> less than 15%</li>
-          <li> 15%-25%</li>
-          <li> 25%-35%</li>
-          <li> 35%-45%</li>
-          <li> &gt;45%</li>
-      </ul>
-  
-      {/* --- Additional Resources --- */}
-      <h2>Additional Resources!</h2>
-      <h3>Where can you learn more about this topic?</h3>
-      <a href="https://www.example.com/" target="_blank" rel="noopener noreferrer"> Visit this website!</a>
-    </>
+      <p className="miniAbout">
+        This website is intended for educating young pet owners on 
+        the diets, health, and behaviors of their beloved pets. 
+        <br></br>Further research into a specific species is highly encouraged as
+        every animal is different.
+      </p>
+      {/* <p>What is this website trying to educate others on? Who is the audience?</p> */}
+    </div>
   );
 }

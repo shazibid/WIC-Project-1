@@ -1,21 +1,21 @@
 import '../styles.css';
 
-// need to create a component and move footer there, preferably not on this page
+// Need to create a component and move footer there, preferably not on this page.
 function Footer() {
   return (
     <footer>
-      <p>Women in Computing (WIC) Fall 2025 Project Teams</p>
+      <p className="wicFooter">Women in Computing (WIC) Fall 2025 Project Team 9</p>
     </footer>
   );
 }
 
-// define RootLayout component
+// Define RootLayout component.
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* head content (meta tags + title) goes here
+      {/* Head content (meta tags + title) goes here.
         Next.js handles most of this automatically
-        can be overridden by specific page.js files
+        can be overridden by specific page.js files.
       */}
       <head>
         <title>Project Title</title>
@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
           {children} 
         </main>
         
-        <Footer />
+        <Footer/>
         
         {/* If you MUST use plain JS fn, put in body or use <script> component */}
         <script src="/script.js" defer></script> 
