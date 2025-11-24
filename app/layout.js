@@ -1,13 +1,5 @@
 import '../styles.css';
-
-// Need to create a component and move footer there, preferably not on this page.
-function Footer() {
-  return (
-    <footer>
-      <p className="wicFooter">Women in Computing (WIC) Fall 2025 Project Team 9</p>
-    </footer>
-  );
-}
+import Footer from './ui/footer';
 
 // Define RootLayout component.
 export default function RootLayout({ children }) {
