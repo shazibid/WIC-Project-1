@@ -31,8 +31,8 @@ export default function ThemeSwitcher() {
   };
 
   return (
-    <button id="theme-toggle" className="btn" onClick={handleClick}>
-      {isDarkMode ? '🌞 Switch to Light Mode' : '🌙 Switch to Dark Mode'}
+    <button id="theme-toggle" className="themeBtn" onClick={handleClick}>
+      {isDarkMode ? '🌞  Switch to Light Mode' : '🌙  Switch to Dark Mode'}
     </button>
   );
 }

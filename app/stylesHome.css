@@ -3,12 +3,11 @@
   /* Colors */
   /* The -- means these are variables! */
   --color-primary: #e34e09;        /* Main action color (Blue) */
-  --color-text-base: #212529;
+  --color-text-base: #431e07;
   --color-text-light: #f8f9fa;
   --color-background: #fff1c0;     /* white bg */
   --color-surface: #f8f9fa;        /* Light card/container bg */
   --color-border: #dee2e6;         /* Subtle border */
-
   --spacing-unit: 8px; /* Use for consistent padding/margin */
 }
   
@@ -22,110 +21,153 @@
   --color-border: #30363d;         /* Dark border */
 }
 
-/* Global Styles using Variables */
-body {
-  font-family: 'Nunito';
-  color: var(--color-text-base);
-  background-color: var(--color-background);
-  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth theme change */
-  margin: 0;
-  padding: 0;
+/* The box containing the theme switch and navigation menu. */
+header {
+  margin-top: 20px;
 }
 
+/* Global Styles w/ Variables */
+body {
+  font-family: 'Chewy';
+  color: var(--color-text-base);
+  background-color: var(--color-background);
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth theme change. */
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+/* "Pet Hub" */
 h1 {
   color: var(--color-primary);
-  margin-bottom: var(--spacing-unit);
   font-family: 'Chewy';
   text-align: center;
   font-size: 75px;
+  margin-bottom: -5px;
 }
 
+/* "Not sure what's the best care for your pet?" */
 h2 {
-  color: var(--color-primary);
-  margin-bottom: var(--spacing-unit);
-  font-family: 'Chewy';
-}
-
-h3 {
-  margin-bottom: var(--spacing-unit);
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
   text-align: center;
   font-size: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 0px;
+  margin-bottom: var(--spacing-unit);
 }
 
-.container {
-  max-width: 1000px;
-  margin: calc(var(--spacing-unit) * 4) auto;
-  padding: calc(var(--spacing-unit) * 2);
+/* "Cats and Dogs" */
+h3 {
+  color: var(--color-primary);
+  margin-bottom: 10px;
+  margin-top: 5px;
+  font-family: 'Chewy';
+  text-align: center;
+  font-size: 40px;
 }
 
-.card {
+/* Both the theme switch and navigation menu. */
+.veryTop {
+  justify-content: center;
+  margin-top: -8px;
+  margin-bottom: -50px;
+  display: flex;
+}
+
+/* The heading, cover, front image. */
+.homeImage {
+  height: 300px;
+  width: 100%;
+  top: 10px;
+  object-fit: cover;
+  object-position: 0% -50px;
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+/* Choosing between dog and cat. */
+.cardSection {
+  display: flex;
+  margin-top: 1%;
+  margin-bottom: 10px;
+}
+
+.petCard {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--spacing-unit);
-  padding: calc(var(--spacing-unit) * 3);
-  margin-bottom: calc(var(--spacing-unit) * 3);
+  padding-left: 2%;
+  padding-right: 2%;
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 12px;
+  text-decoration: none;
 }
 
-.btn {
+.petCard img {
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+}
+
+.petCard:hover, .petCard:hover h3, .petCard:hover p {
   background-color: var(--color-primary);
   color: var(--color-text-light);
-  padding: var(--spacing-unit) calc(var(--spacing-unit) * 2);
-  border: none;
-  border-radius: 4px;
   cursor: pointer;
 }
 
-/* nav bar styling / animation -- overlay menu */
-.overlay {
-  height: 0;
-  width: 100%; 
-  position: fixed; 
-  /* Z-index 1 is too low; raise it high to ensure it covers all content */
-  z-index: 100; 
-  left: 0;
-  top: 0;
-  
-  background-color: var(--color-background); 
-  opacity: 0.98;
-  overflow-y: hidden;
-  transition: 0.5s; 
-  z-index: 100;
+.petCard:visited {
+  text-decoration: none;
+  color: var(--color-text-base);
 }
 
-/* Position content inside overlay */
-.overlay-content {
-  position: relative;
-  top: 25%; 
-  transform: translateY(-50%); /* center content vertically */
-  width: 100%; 
+/* Theme Switch Button */
+.themeSwitch {
+  width: max-content;
+  margin-right: auto;
+  font-family: 'Chewy';
+}
+
+.themeBtn {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: var(--spacing-unit) calc(var(--spacing-unit) * 2);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Chewy';
+    font-size: 15px;
+  }
+
+.miniAbout {
+  font-size: 12px;
   text-align: center;
 }
 
-/* nav links inside overlay */
-.overlay a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 36px;
-  
-  /* theme-aware link color */
-  color: var(--color-text-base); /* text color changes w theme */
-  
-  display: block; 
-  transition: 0.3s; 
+/* Footer */
+.wicFooter {
+  text-align: center;
+  color: var(--color-text-light);
+  background-color: var(--color-primary);
 }
 
-/* When you mouse over the navigation links, change link color */
-.overlay a:hover, .overlay a:focus {
-  /* Use the primary color for clear link highlighting */
+/* COPIED OVER TO FROM OLD STYLE.CSS FILE. */
+/* Menu Navigation */
+.nav-wrapper {
+  display: flex;
+  justify-content: flex-end; 
+}
+
+.menu-button {
+  font-size: 50px;
+  cursor: pointer;
   color: var(--color-primary); 
-}
-
-/* position close button to top right corner */
-.overlay .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
+  margin-top: -21px;
+  margin-bottom: -10px;
+  margin-left: auto;
 }
 
 /* Media query for small screens */
@@ -138,22 +180,55 @@ h3 {
   }
 }
 
-/* new button wrapper */
-.nav-wrapper {
-  /* Flexbox on container to manage horiz position */
-  display: flex;
+/* Overlay / Navigation Menu */
+.overlay {
+  height: 0;
+  width: 100%; 
+  position: fixed; 
+  /* Z-index 1 is too low; raise it high to ensure it covers all content. */
+  z-index: 100; 
+  left: 0;
+  top: 0;
   
-  /* push menu button to far right */
-  justify-content: flex-end; 
-  
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  z-index: 10;
+  background-color: var(--color-background); 
+  opacity: 0.98;
+  overflow-y: hidden;
+  transition: 0.5s; 
+  z-index: 100;
 }
 
-.menu-button {
-  font-size: 50px;
-  cursor: pointer;
-  color: var(--color-text-base); 
+/* Position content inside overlay. */
+.overlay-content {
+  position: relative;
+  top: 25%; 
+  transform: translateY(-50%); /* Center content vertically. */
+  width: 100%; 
+  text-align: center;
+}
+
+/* Navigation Links */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  
+  /* Theme-aware link color. */
+  color: var(--color-text-base); /* Text color changes w/ theme. */
+  
+  display: block; 
+  transition: 0.3s; 
+}
+
+/* When you mouse over the links, change link color. */
+.overlay a:hover, .overlay a:focus {
+  /* Use the primary color for clear link highlighting. */
+  color: var(--color-primary); 
+}
+
+/* Position close button to top right corner. */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
 }
