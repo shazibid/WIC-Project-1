@@ -50,11 +50,19 @@ export default function PetsPage() {
             <h3><Link href="/pets/dogs">View Dogs</Link></h3>
             <p>Find information and photos of all our canine companions.</p>
           </div>
+          
+          {/* add stuff here */}
+
         </section>
 
         {/* --- LINKS TO ANIMAL SHELTERS --- */}
         <section>
           <h2>Local Animal Shelters</h2>
+          <p>
+            <a href="https://animalcenter.org/" target="_blank" rel="noopener noreferrer">
+              San Diego Animal Center 
+            </a> 
+          </p>
         </section>
       </div>
     </div>
