@@ -7,7 +7,7 @@ export default function AboutPage() {
       
       <div className="container">
         <header>
-          <h1>About Our Project Title</h1>
+          <h1>About Our Project</h1>
           <p>Thank you for checking out our website!</p>
         </header>
 
