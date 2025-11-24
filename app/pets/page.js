@@ -1,35 +1,62 @@
+import './stylesPets.css';
 import Navbar from '../ui/nav';
+import ThemeSwitcher from '../ui/themeSwitcher';
 import Link from 'next/link';
 
 export default function PetsPage() {
   return (
-    <>
-      <Navbar />
+    <div>
+      {/*Importing Fonts*/}
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+      </style>
 
-      <div className="container">
-        <header>
-          <h1>Pets!</h1>
-          <p>animals text</p>
-        </header>
+      {/* --- HEADINGS --- */}
+      <header>
+        <div className="veryTop">
+          {/* Light/Dark Mode Button */}
+          <div className="themeSwitch"><ThemeSwitcher/></div>
+          {/* Navigation Bar Button */}
+          <div><Navbar/></div>
+        </div>
 
+        <h1>Nearby Pets</h1>
+        <p>Looking to adopt? Find your pet of your dreams at a local animal shelter!</p>
+      </header>
+
+      <div>
         {/* --- PETS CONTENT --- */}
         <section>
           <h2>Featured Pets</h2>
-          
-          {/* sub-page links using link component */}
-          <div>
-            <h3><Link href="/pets/cats">View Cats</Link></h3>
-            <p>Find information and photos of all our feline friends.</p>
+
+          {/* CATS */}
+          <div className="gray">
+            <div className="pink">
+              Milton (M)
+              <img id="milton" src="miltonCat.jpeg"></img>
+            </div>
+            <div className="pink">
+              Jellybean (F)
+              <img id="jellybean" src="jellybeanCat.jpeg"></img>
+            </div>
+            <div className="pink">
+              Wilson (M)
+              <img id="wilson" src="wilsonCat.jpeg"></img>
+            </div>
           </div>
 
           <div>
             <h3><Link href="/pets/dogs">View Dogs</Link></h3>
             <p>Find information and photos of all our canine companions.</p>
           </div>
-          
-          {/* add stuff here */}
+        </section>
+
+        {/* --- LINKS TO ANIMAL SHELTERS --- */}
+        <section>
+          <h2>Local Animal Shelters</h2>
         </section>
       </div>
-    </>
+    </div>
   );
 }
