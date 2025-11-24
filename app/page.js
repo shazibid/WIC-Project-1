@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function HomePage() {
   return (
-    <div>
+    <div className="page">
       {/*Importing Fonts*/}
       <style>
         @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
@@ -64,7 +64,6 @@ export default function HomePage() {
         <br></br>Further research into a specific species is highly encouraged as
         every animal is different.
       </p>
-      {/* <p>What is this website trying to educate others on? Who is the audience?</p> */}
     </div>
   );
 }

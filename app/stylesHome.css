@@ -21,6 +21,13 @@
   --color-border: #30363d;         /* Dark border */
 }
 
+.page {
+  width: 75%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* The box containing the theme switch and navigation menu. */
 header {
   margin-top: 20px;
@@ -77,14 +84,16 @@ h3 {
 
 /* The heading, cover, front image. */
 .homeImage {
+  position: relative;
   height: 300px;
   width: 100%;
   top: 10px;
   object-fit: cover;
-  object-position: 0% -50px;
+  object-position: 0 -1;
+  
   display: block;
   margin: auto;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 /* Choosing between dog and cat. */
@@ -152,6 +161,10 @@ h3 {
   text-align: center;
   color: var(--color-text-light);
   background-color: var(--color-primary);
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  max-width: 700px;
 }
 
 /* COPIED OVER TO FROM OLD STYLE.CSS FILE. */
