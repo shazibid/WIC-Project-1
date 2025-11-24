@@ -26,8 +26,17 @@ export default function PetsPage() {
             <h3><Link href="/pets/dogs">View Dogs</Link></h3>
             <p>Find information and photos of all our canine companions.</p>
           </div>
+<<<<<<< Updated upstream
           
           {/* add stuff here */}
+=======
+        </section>
+
+        {/* --- LINKS TO ANIMAL SHELTERS --- */}
+        <section>
+          <h2>Local Animal Shelters</h2>
+          <p>https://animalcenter.org/</p>
+>>>>>>> Stashed changes
         </section>
       </div>
     </>
