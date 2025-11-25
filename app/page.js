@@ -25,12 +25,14 @@ export default function HomePage() {
         <h2>Not sure what's the best care for your pet? We got you.</h2>
 
         {/* Move "your-image.jpg" to "public" folder */}
-        <img 
+        <div className="homeImageBox">
+          <img 
           src="homeBanner.jpeg"
           alt="Header Image" 
           className="homeImage"
           priority="true" //Load important image first
-        /> 
+          />
+        </div>
       </header>
 
       {/* --- MAIN CONTENT --- */}

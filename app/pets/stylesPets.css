@@ -24,15 +24,20 @@ header p {
     text-align: center;
 }
 
+.featuredPets {
+    font-size: 30px;
+}
+
 .gray {
     background-color: gray;
     display: flex;
-
+    width: 100%;
+    max-width: inherit;
+    margin-bottom: 10px;
 }
 
 .pink {
     background-color: pink;
-    max-width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -42,11 +47,7 @@ header p {
 .pink img {
     display: block;
     object-fit: cover;
-    max-width: 200px;
-    max-height: 200px;
-    min-width: 200px;
-}
-
-#jellybean {
-    object-position: 0 -60px;
+    max-width: 100%;
+    width: 200px;
+    height: 200px;
 }

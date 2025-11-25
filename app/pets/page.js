@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function PetsPage() {
   return (
-    <div>
+    <div className="page">
       {/*Importing Fonts*/}
       <style>
         @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
@@ -28,8 +28,9 @@ export default function PetsPage() {
       <div>
         {/* --- PETS CONTENT --- */}
         <section>
-          <h2>Featured Pets</h2>
+          <h2 className="featuredPets">Featured Pets</h2>
 
+          <h2>Feline Friends</h2>
           {/* CATS */}
           <div className="gray">
             <div className="pink">
@@ -46,9 +47,21 @@ export default function PetsPage() {
             </div>
           </div>
 
-          <div>
-            <h3><Link href="/pets/dogs">View Dogs</Link></h3>
-            <p>Find information and photos of all our canine companions.</p>
+          <h2>Canine Companions</h2>
+          {/* DOGS */}
+          <div className="gray">
+            <div className="pink">
+              Milton (M)
+              <img id="milton" src="miltonCat.jpeg"></img>
+            </div>
+            <div className="pink">
+              Jellybean (F)
+              <img id="jellybean" src="jellybeanCat.jpeg"></img>
+            </div>
+            <div className="pink">
+              Wilson (M)
+              <img id="wilson" src="wilsonCat.jpeg"></img>
+            </div>
           </div>
         </section>
 
