@@ -34,7 +34,6 @@ header p {
     width: 100%;
     max-width: inherit;
     margin-bottom: 10px;
-    padding-bottom: 10px;
 }
 
 .petIndividual {
@@ -46,6 +45,14 @@ header p {
     color: var(--color-text-base);
     cursor: pointer;
     font-size: 18px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.petIndividual:hover {
+    color: var(--color-text-light);
+    background-color: var(--color-primary);
 }
 
 .petIndividual img {
@@ -54,4 +61,38 @@ header p {
     max-width: 100%;
     width: 200px;
     height: 200px;
+}
+
+.animalShelter {
+    background-color: var(--color-text-light);
+    height: 300px;
+    display: flex;
+    overflow-wrap: break-word;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.animalShelter:hover, .animalShelter:hover h3, .animalShelter:hover p {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+}
+
+.animalShelter img {
+    max-height: 300px;
+    width: 50%;
+    object-fit: cover;
+}
+
+.animalShelter p {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100%;
+    overflow: scroll;
+    color: var(--color-text-base);
+}
+
+.animalShelter p h3 {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
 }

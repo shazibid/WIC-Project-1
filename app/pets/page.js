@@ -68,6 +68,30 @@ export default function PetsPage() {
         {/* --- LINKS TO ANIMAL SHELTERS --- */}
         <section>
           <h2 className="biggerH2">Local Animal Shelters</h2>
+
+          <a className="animalShelter" target="_blank" href="https://sdhumane.org/">
+            <img src="sanDiegoHumaneSociety.png"></img>
+            <p>
+              <h3>The San Diego Humane Society</h3>
+              Location:<br></br>- 5500 Gaines St, San Diego, CA 92110<br></br>
+              Hours:<br></br>- Monday: Closed<br></br>
+              - Wednesday: 10 AM to 2 PM<br></br>
+              - Others: 10 AM to 5 PM<br></br>
+              Phone Number:<br></br>
+              - +1 (619) 299-7012
+            </p>
+          </a>
+
+          <a className="animalShelter" target="_blank" href="https://pawsofcoronado.org/">
+            <img src="pawsOfCoronado.png"></img>
+            <p>
+              <h3>PAWS of Coronado</h3>
+              Location:<br></br>- 1395 1st St, Coronado, CA 92118<br></br>
+              Hours:<br></br>- Daily: 9 AM to 4 PM<br></br>
+              Phone Number:<br></br>
+              - +1 (619) 435-8247
+            </p>
+          </a>
         </section>
       </div>
     </div>
