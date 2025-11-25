@@ -28,46 +28,46 @@ export default function PetsPage() {
       <div>
         {/* --- PETS CONTENT --- */}
         <section>
-          <h2 className="featuredPets">Featured Pets</h2>
+          <h2 className="biggerH2">Featured Pets</h2>
 
           <h2>Feline Friends</h2>
           {/* CATS */}
-          <div className="gray">
-            <div className="pink">
+          <div className="petCategory">
+            <a className="petIndividual" target="_blank" href="https://sdhumane.org/adopt/available-pets/animal-single/?petId=963403">
               Milton (M)
               <img id="milton" src="miltonCat.jpeg"></img>
-            </div>
-            <div className="pink">
+            </a>
+            <a className="petIndividual" target="_blank" href="https://sdhumane.org/adopt/available-pets/animal-single/?petId=140693">
               Jellybean (F)
-              <img id="jellybean" src="jellybeanCat.jpeg"></img>
-            </div>
-            <div className="pink">
+              <img id="jellybean" src="jellybeanCat.png"></img>
+            </a>
+            <a className="petIndividual" target="_blank" href="https://sdhumane.org/adopt/available-pets/animal-single/?petId=550244">
               Wilson (M)
               <img id="wilson" src="wilsonCat.jpeg"></img>
-            </div>
+            </a>
           </div>
 
           <h2>Canine Companions</h2>
           {/* DOGS */}
-          <div className="gray">
-            <div className="pink">
-              Milton (M)
-              <img id="milton" src="miltonCat.jpeg"></img>
-            </div>
-            <div className="pink">
-              Jellybean (F)
-              <img id="jellybean" src="jellybeanCat.jpeg"></img>
-            </div>
-            <div className="pink">
-              Wilson (M)
-              <img id="wilson" src="wilsonCat.jpeg"></img>
-            </div>
+          <div className="petCategory">
+            <a className="petIndividual" target="_blank" href="https://sdhumane.org/adopt/available-pets/animal-single/?petId=966991">
+              Joey (M)
+              <img id="joey" src="joeyDog.png"></img>
+            </a>
+            <a className="petIndividual" target="_blank" href="https://sdhumane.org/adopt/available-pets/animal-single/?petId=945592">
+              Brie (F)
+              <img id="brie" src="brieDog.png"></img>
+            </a>
+            <a className="petIndividual" target="_blank" href="https://sdhumane.org/adopt/available-pets/animal-single?petId=954966">
+              Zoe (F)
+              <img id="zoe" src="zoeDog.jpeg"></img>
+            </a>
           </div>
         </section>
 
         {/* --- LINKS TO ANIMAL SHELTERS --- */}
         <section>
-          <h2>Local Animal Shelters</h2>
+          <h2 className="biggerH2">Local Animal Shelters</h2>
         </section>
       </div>
     </div>

@@ -24,27 +24,31 @@ header p {
     text-align: center;
 }
 
-.featuredPets {
+.biggerH2 {
     font-size: 30px;
 }
 
-.gray {
-    background-color: gray;
+.petCategory {
+    background-color: var(--color-surface);
     display: flex;
     width: 100%;
     max-width: inherit;
     margin-bottom: 10px;
+    padding-bottom: 10px;
 }
 
-.pink {
-    background-color: pink;
+.petIndividual {
     display: block;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    text-decoration: none;
+    color: var(--color-text-base);
+    cursor: pointer;
+    font-size: 18px;
 }
 
-.pink img {
+.petIndividual img {
     display: block;
     object-fit: cover;
     max-width: 100%;
