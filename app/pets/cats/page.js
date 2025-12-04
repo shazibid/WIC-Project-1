@@ -43,14 +43,21 @@ export default function CatsPage() {
     feeding: {
       title: 'What to Feed Your Cat',
       summary: 'Cats are obligate carnivores who need meat to survive, so feed them high-quality commercial cat food and always provide fresh water.',
-      bullets: [
-        'Cats are obligate carnivores - they MUST eat meat to survive',
+      dos: [
         'Feed high-quality commercial cat food that meets nutritional needs',
+        'Remember cats are obligate carnivores - they MUST eat meat to survive',
         'Always provide fresh, clean water - cats prefer running water',
-        'NEVER feed cats: chocolate, onions, garlic, grapes, or anything with caffeine',
-        'These foods are toxic and can make cats very sick',
-        'Kittens need special kitten food, adult cats need adult food',
+        'Give kittens special kitten food for proper growth',
+        'Feed adult cats appropriate adult cat food',
         'Talk to your vet about the right amount to feed your cat'
+      ],
+      donts: [
+        'NEVER feed cats chocolate - it\'s toxic and can be fatal',
+        'NEVER feed cats onions or garlic - they damage red blood cells',
+        'NEVER feed cats grapes or raisins - they can cause kidney failure',
+        'NEVER feed cats anything with caffeine - it\'s extremely toxic',
+        'Don\'t feed table scraps that may contain harmful ingredients',
+        'Don\'t overfeed - follow portion guidelines to prevent obesity'
       ],
       imageSrc: '/wilsonCat.jpeg',
       imageAlt: 'Cat eating food'
@@ -73,14 +80,20 @@ export default function CatsPage() {
     petting: {
       title: 'How to Pet a Cat',
       summary: 'Most cats enjoy being petted on their head, chin, and back, but always let the cat come to you and watch for signs they want you to stop.',
-      bullets: [
+      dos: [
         'Start slowly and let the cat come to you - don\'t force interaction',
-        'Most cats enjoy being petted on their head, chin, and along their back',
-        'Watch for signs they\'re enjoying it: purring, kneading, leaning into your hand',
-        'Stop if you see: tail swishing, ears back, moving away, or hissing',
-        'Some cats like belly rubs, but many don\'t - be careful!',
+        'Pet cats on their head, chin, and along their back - these are usually safe spots',
+        'Watch for positive signs: purring, kneading, leaning into your hand, slow blinking',
         'Respect when a cat wants to be left alone',
-        'Each cat has different preferences - learn what your cat likes'
+        'Learn what your individual cat likes - each cat has different preferences'
+      ],
+      donts: [
+        'Don\'t force interaction - let the cat come to you first',
+        'Don\'t pet a cat that is showing signs of discomfort: tail swishing, ears back, moving away, or hissing',
+        'Don\'t immediately go for belly rubs - many cats don\'t like them, be careful!',
+        'Don\'t approach a cat from behind or suddenly - this can startle them',
+        'Don\'t continue petting if the cat shows any signs of wanting to stop',
+        'Don\'t pet a cat that is eating, sleeping, or seems stressed'
       ],
       imageSrc: '/jellybeanCat.jpeg',
       imageAlt: 'Person petting a cat'
@@ -88,15 +101,16 @@ export default function CatsPage() {
     affection: {
       title: 'How to Tell if Your Cat Likes You',
       summary: 'Signs your cat likes you include purring, slow blinking, kneading, bringing you toys, rubbing against you, and following you around.',
-      bullets: [
-        'Purring when you\'re near is a sign of contentment',
-        'Slow blinking (cat kisses!) shows trust and affection',
-        'Kneading with their paws is a sign of happiness',
-        'Bringing you "gifts" like toys shows they care',
-        'Rubbing against you marks you as part of their family',
-        'Following you around means they want to be near you',
-        'A cat that shows you their belly trusts you completely'
+      dos: [
+        'YES - Purring when you\'re near is a sign of contentment',
+        'YES - Slow blinking (cat kisses!) shows trust and affection',
+        'YES - Kneading with their paws is a sign of happiness',
+        'YES - Bringing you "gifts" like toys shows they care',
+        'YES - Rubbing against you marks you as part of their family',
+        'YES - Following you around means they want to be near you',
+        'YES - A cat that shows you their belly trusts you completely'
       ],
+      donts: [],
       imageSrc: '/wilsonCat.jpeg',
       imageAlt: 'Cat showing affection'
     }
@@ -154,71 +168,57 @@ export default function CatsPage() {
         {/* Interactive Anatomy Section */}
         <InteractiveAnatomy
           title="Basic Cat Anatomy"
-          imageSrc="/miltonCat.jpeg"
+          imageSrc="/catAnatomy.png"
           imageAlt="Cat anatomy diagram"
           anatomyParts={[
             {
               id: 'whiskers',
               name: 'Whiskers',
               description: 'Sensitive whiskers help cats navigate and sense their surroundings, even in the dark.',
-              x: 15,
-              y: 30,
-              width: 8,
-              height: 8
+              x: 90,
+              y: 30
             },
             {
               id: 'ears',
               name: 'Ears',
               description: 'Cats can rotate their ears independently to detect sounds from different directions.',
-              x: 20,
-              y: 15,
-              width: 12,
-              height: 12
+              x: 77,
+              y: 15
             },
             {
               id: 'eyes',
               name: 'Eyes',
               description: 'Excellent night vision helps cats see in low light, perfect for hunting.',
-              x: 25,
-              y: 25,
-              width: 10,
-              height: 10
+              x: 90,
+              y: 25
             },
             {
               id: 'spine',
               name: 'Flexible Spine',
               description: 'Cats have very flexible spines that let them twist and turn easily.',
-              x: 50,
-              y: 40,
-              width: 15,
-              height: 25
+              x: 45,
+              y: 25
             },
             {
               id: 'claws',
               name: 'Retractable Claws',
               description: 'Sharp claws that can retract help cats climb and defend themselves.',
-              x: 15,
-              y: 70,
-              width: 8,
-              height: 8
+              x: 75,
+              y: 67
             },
             {
               id: 'tail',
               name: 'Tail',
               description: 'Tails help with balance and communication - watch the tail to understand mood.',
-              x: 50,
-              y: 75,
-              width: 8,
-              height: 15
+              x: 9,
+              y: 33
             },
             {
               id: 'tongue',
               name: 'Rough Tongue',
               description: 'Cats have rough tongues perfect for grooming their fur.',
-              x: 30,
-              y: 45,
-              width: 8,
-              height: 8
+              x: 87,
+              y: 35
             }
           ]}
         />

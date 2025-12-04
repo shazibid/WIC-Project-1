@@ -222,7 +222,7 @@ header p {
 }
 
 .modal-title {
-    color: var(--color-primary);
+    color: var(--color-text-base);
     font-family: 'Chewy', sans-serif;
     font-size: 32px;
     margin: 0;
@@ -263,6 +263,30 @@ header p {
     color: var(--color-primary);
     font-size: 24px;
     line-height: 1;
+}
+
+/* Dos and Don'ts Sections */
+.dos-section,
+.donts-section {
+    margin-top: calc(var(--spacing-unit) * 3);
+}
+
+.dos-title,
+.donts-title {
+    font-family: 'Chewy', sans-serif;
+    font-size: 22px;
+    margin: 0 0 calc(var(--spacing-unit) * 2) 0;
+    color: var(--color-text-base);
+}
+
+.dos-list li::before {
+    content: "✓";
+    color: #28a745;
+}
+
+.donts-list li::before {
+    content: "✗";
+    color: #dc3545;
 }
 
 /* Animations */
@@ -491,9 +515,10 @@ header p {
 
 .parts-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, max-content));
     gap: calc(var(--spacing-unit) * 2);
     margin-top: calc(var(--spacing-unit) * 2);
+    justify-content: center;
 }
 
 .part-button {

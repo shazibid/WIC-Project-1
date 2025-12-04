@@ -45,15 +45,21 @@ export default function DogsPage() {
     feeding: {
       title: 'What to Feed Your Dog',
       summary: 'Feed your dog high-quality commercial dog food appropriate for their age, size, and activity level, and always provide fresh water.',
-      bullets: [
+      dos: [
         'Feed high-quality commercial dog food that meets nutritional needs',
-        'Puppies need special puppy food for growth',
-        'Senior dogs may need senior formulas with different nutrients',
-        'Always provide fresh, clean water',
-        'NEVER feed dogs: chocolate, grapes, onions, garlic, or foods with xylitol',
-        'These foods are toxic and can make dogs very sick or even be fatal',
+        'Give puppies special puppy food for proper growth',
+        'Provide senior dogs with senior formulas with appropriate nutrients',
+        'Always provide fresh, clean water daily',
         'Talk to your vet about the right amount and type of food for your dog',
-        'Some dogs have food allergies - watch for signs like itching or stomach upset'
+        'Watch for signs of food allergies like itching or stomach upset'
+      ],
+      donts: [
+        'NEVER feed dogs chocolate - it\'s toxic and can be fatal',
+        'NEVER feed dogs grapes or raisins - they can cause kidney failure',
+        'NEVER feed dogs onions or garlic - they damage red blood cells',
+        'NEVER feed dogs foods with xylitol (sugar-free gum, candy) - it\'s extremely toxic',
+        'Don\'t feed table scraps that may contain harmful ingredients',
+        'Don\'t overfeed - follow portion guidelines to prevent obesity'
       ],
       imageSrc: '/mulliganDog.jpeg',
       imageAlt: 'Dog eating food'
@@ -77,15 +83,21 @@ export default function DogsPage() {
     petting: {
       title: 'How to Pet a Dog',
       summary: 'Most dogs love being petted! Start by letting the dog sniff your hand, then gently pet their chest, shoulders, or back.',
-      bullets: [
+      dos: [
         'Always ask the owner before petting a dog you don\'t know',
         'Let the dog sniff your hand first - this is how they say hello',
         'Gently pet their chest, shoulders, or back - these are usually safe spots',
-        'Many dogs enjoy belly rubs, but not all - watch their body language',
-        'Stop if the dog shows signs of discomfort: growling, moving away, or stiffening',
-        'A happy dog will lean into your hand and wag their tail',
+        'Watch for positive body language: leaning into your hand, wagging tail, relaxed posture',
         'Respect when a dog wants to be left alone',
-        'Each dog has different preferences - learn what your dog likes'
+        'Learn what your individual dog likes - each dog has different preferences'
+      ],
+      donts: [
+        'Don\'t approach a dog from behind or suddenly - this can startle them',
+        'Don\'t pet a dog on the head immediately - let them get comfortable first',
+        'Don\'t continue petting if the dog shows discomfort: growling, moving away, or stiffening',
+        'Don\'t force belly rubs - not all dogs like them, watch their body language',
+        'Don\'t stare directly into a dog\'s eyes - this can be seen as threatening',
+        'Don\'t pet a dog that is eating, sleeping, or caring for puppies'
       ],
       imageSrc: '/mulliganDog.jpeg',
       imageAlt: 'Person petting a dog'
@@ -93,16 +105,17 @@ export default function DogsPage() {
     affection: {
       title: 'How to Tell if Your Dog Likes You',
       summary: 'Signs your dog likes you include wagging tail, bringing you toys, following you around, leaning against you, and getting excited when you come home.',
-      bullets: [
-        'Wagging tail (especially a relaxed, full-body wag) shows happiness',
-        'Bringing you toys is a sign of trust and wanting to play',
-        'Following you around means they want to be near you',
-        'Leaning against you shows they feel safe and comfortable',
-        'Licking you is a sign of affection (dog kisses!)',
-        'Getting excited when you come home shows they missed you',
-        'A happy dog will have relaxed ears and a soft, open mouth',
-        'Dogs that show you their belly trust you completely'
+      dos: [
+        'YES - Wagging tail (especially a relaxed, full-body wag) shows happiness',
+        'YES - Bringing you toys is a sign of trust and wanting to play',
+        'YES - Following you around means they want to be near you',
+        'YES - Leaning against you shows they feel safe and comfortable',
+        'YES - Licking you is a sign of affection (dog kisses!)',
+        'YES - Getting excited when you come home shows they missed you',
+        'YES - Relaxed ears and a soft, open mouth indicate a happy, comfortable dog',
+        'YES - Dogs that show you their belly trust you completely'
       ],
+      donts: [],
       imageSrc: '/mulliganDog.jpeg',
       imageAlt: 'Dog showing affection'
     }
@@ -167,36 +180,36 @@ export default function DogsPage() {
               id: 'nose',
               name: 'Nose',
               description: 'Dogs have powerful senses of smell - much stronger than humans! They can detect scents we can\'t even imagine. Their nose has up to 300 million scent receptors compared to our 6 million.',
-              x: 52,
-              y: 12
+              x: 10,
+              y: 20
             },
             {
               id: 'ears',
               name: 'Ears',
               description: 'Excellent hearing helps dogs detect sounds we can\'t hear. Dogs can hear frequencies up to 65,000 Hz (humans only hear up to 20,000 Hz). Watch ear position to understand their mood!',
               x: 25,
-              y: 10
+              y: 20
             },
             {
               id: 'eyes',
               name: 'Eyes',
               description: 'Good vision helps dogs see movement and navigate. They can see better in dim light than humans, but see fewer colors. Dogs have a wider field of vision - about 240 degrees!',
-              x: 40,
-              y: 15
+              x: 15,
+              y: 17
             },
             {
               id: 'jaws',
               name: 'Strong Jaws',
               description: 'Strong jaws are perfect for chewing toys and food. Dogs have 42 teeth - puppies have 28 baby teeth that fall out. Their jaw strength varies by breed.',
-              x: 48,
-              y: 22
+              x: 20,
+              y: 30
             },
             {
               id: 'heart',
               name: 'Heart',
               description: 'A dog\'s heart pumps blood throughout their body. Smaller dogs have faster heart rates (100-140 beats per minute) than larger dogs (60-100 beats per minute).',
-              x: 38,
-              y: 32
+              x: 35,
+              y: 35
             },
             {
               id: 'lungs',
@@ -209,29 +222,29 @@ export default function DogsPage() {
               id: 'spine',
               name: 'Spine',
               description: 'A dog\'s spine is flexible and strong, allowing them to run, jump, and twist. It protects the spinal cord which sends messages between the brain and body.',
-              x: 35,
-              y: 28
+              x: 50,
+              y: 25
             },
             {
               id: 'stomach',
               name: 'Stomach',
               description: 'A dog\'s stomach is where food digestion begins. Dogs have shorter digestive tracts than humans, which is why they digest food faster.',
-              x: 42,
-              y: 45
+              x: 53,
+              y: 40
             },
             {
               id: 'legs',
               name: 'Legs',
               description: 'A dog\'s legs are powerful and built for running. The front legs carry about 60% of their weight, while the back legs provide propulsion for running and jumping.',
-              x: 35,
-              y: 58
+              x: 65,
+              y: 50
             },
             {
               id: 'paws',
               name: 'Padded Paws',
               description: 'Padded paws help dogs walk comfortably on different surfaces like hot pavement or rough terrain. The pads act like shock absorbers and provide grip.',
-              x: 32,
-              y: 85
+              x: 17,
+              y: 57
             },
             {
               id: 'tail',
