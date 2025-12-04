@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import Image from 'next/image';
 
-export default function InfoModal({ isOpen, onClose, title, summary, bullets, imageSrc, imageAlt }) {
+export default function InfoModal({ isOpen, onClose, title, summary, bullets, dos, donts, imageSrc, imageAlt }) {
   // Close modal on Escape key
   useEffect(() => {
     const handleEscape = (e) => {
@@ -61,11 +61,34 @@ export default function InfoModal({ isOpen, onClose, title, summary, bullets, im
           <div className="modal-text-container">
             <h2 id="modal-title" className="modal-title">{title}</h2>
             <p className="modal-summary">{summary}</p>
-            <ul className="modal-bullets">
-              {bullets.map((bullet, index) => (
-                <li key={index}>{bullet}</li>
-              ))}
-            </ul>
+            {dos ? (
+              <>
+                <div className="dos-section">
+                  <h3 className="dos-title">🌱 DO:</h3>
+                  <ul className="modal-bullets dos-list">
+                    {dos.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+                {donts && donts.length > 0 && (
+                  <div className="donts-section">
+                    <h3 className="donts-title">🙅‍♀️ DON'T:</h3>
+                    <ul className="modal-bullets donts-list">
+                      {donts.map((item, index) => (
+                        <li key={index}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </>
+            ) : bullets ? (
+              <ul className="modal-bullets">
+                {bullets.map((bullet, index) => (
+                  <li key={index}>{bullet}</li>
+                ))}
+              </ul>
+            ) : null}
           </div>
         </div>
       </div>
