@@ -1,9 +1,20 @@
-import Navbar from '../ui/nav'; 
+import Navbar from '../ui/nav';
+import ThemeSwitcher from '../ui/themeSwitcher';
+
+export const metadata = {
+  title: 'About Us - Pet Hub',
+  description: 'Learn about the team behind Pet Hub and our mission to educate young pet owners',
+};
 
 export default function AboutPage() {
   return (
     <>
-      <Navbar />
+      <header>
+        <div className="veryTop">
+          <div className="themeSwitch"><ThemeSwitcher/></div>
+          <div><Navbar/></div>
+        </div>
+      </header>
       
       <div className="container">
         <header>

@@ -1,25 +1,293 @@
-import Navbar from '../../ui/nav'; 
+'use client';
+
+import { useState } from 'react';
+import Navbar from '../../ui/nav';
+import ThemeSwitcher from '../../ui/themeSwitcher';
 import Link from 'next/link';
+import InfoModal from '../../ui/infoModal';
+import InteractiveAnatomy from '../../ui/interactiveAnatomy';
+import '../stylesPets.css';
 
 export default function DogsPage() {
+  const [openModal, setOpenModal] = useState(null);
+
+  const dogInfo = {
+    personalities: {
+      title: 'Dog Personalities and Traits',
+      summary: 'Dogs are loyal, social animals that thrive on companionship and come in all shapes and sizes, each with unique personalities.',
+      bullets: [
+        'Dogs are pack animals and form strong bonds with their families',
+        'Many dogs are energetic and need regular exercise and playtime',
+        'Some dogs are more laid-back and prefer quiet activities',
+        'Each dog has a unique personality - some are shy, others are outgoing',
+        'Dogs are very social and usually love being around people',
+        'They communicate through body language, barking, and tail wagging',
+        'Dogs need mental stimulation as well as physical exercise'
+      ],
+      imageSrc: '/mulliganDog.jpeg',
+      imageAlt: 'A friendly dog showing personality traits'
+    },
+    breeds: {
+      title: 'Dog Breeds and Lifespan',
+      summary: 'There are hundreds of dog breeds from tiny Chihuahuas to giant Great Danes, and smaller breeds typically live longer than larger breeds.',
+      bullets: [
+        'Smaller breeds often live 12-16 years with proper care',
+        'Larger breeds typically live 8-12 years',
+        'Popular breeds include Labrador Retrievers, Golden Retrievers, German Shepherds, and French Bulldogs',
+        'Each breed has different energy levels, grooming needs, and temperaments',
+        'Mixed breed dogs (mutts) are wonderful companions too',
+        'Research breeds before choosing to find one that fits your lifestyle',
+        'Regular vet checkups help ensure your dog lives a long, healthy life'
+      ],
+      imageSrc: '/mulliganDog.jpeg',
+      imageAlt: 'Different dog breeds'
+    },
+    feeding: {
+      title: 'What to Feed Your Dog',
+      summary: 'Feed your dog high-quality commercial dog food appropriate for their age, size, and activity level, and always provide fresh water.',
+      bullets: [
+        'Feed high-quality commercial dog food that meets nutritional needs',
+        'Puppies need special puppy food for growth',
+        'Senior dogs may need senior formulas with different nutrients',
+        'Always provide fresh, clean water',
+        'NEVER feed dogs: chocolate, grapes, onions, garlic, or foods with xylitol',
+        'These foods are toxic and can make dogs very sick or even be fatal',
+        'Talk to your vet about the right amount and type of food for your dog',
+        'Some dogs have food allergies - watch for signs like itching or stomach upset'
+      ],
+      imageSrc: '/mulliganDog.jpeg',
+      imageAlt: 'Dog eating food'
+    },
+    anatomy: {
+      title: 'Basic Dog Anatomy',
+      summary: 'Dogs have powerful senses of smell, excellent hearing, strong jaws, and use their body language to communicate how they\'re feeling.',
+      bullets: [
+        'Dogs have powerful senses of smell - much stronger than humans',
+        'Excellent hearing helps them detect sounds we can\'t hear',
+        'Good vision helps them see movement and navigate',
+        'Strong jaws are perfect for chewing toys and food',
+        'Padded paws help them walk comfortably on different surfaces',
+        'Tails help with balance and communication - watch the tail to understand mood',
+        'Body language (tail position, ear position, posture) tells you how they feel',
+        'Dogs have 42 teeth - puppies have 28 baby teeth that fall out'
+      ],
+      imageSrc: '/mulliganDog.jpeg',
+      imageAlt: 'Dog anatomy features'
+    },
+    petting: {
+      title: 'How to Pet a Dog',
+      summary: 'Most dogs love being petted! Start by letting the dog sniff your hand, then gently pet their chest, shoulders, or back.',
+      bullets: [
+        'Always ask the owner before petting a dog you don\'t know',
+        'Let the dog sniff your hand first - this is how they say hello',
+        'Gently pet their chest, shoulders, or back - these are usually safe spots',
+        'Many dogs enjoy belly rubs, but not all - watch their body language',
+        'Stop if the dog shows signs of discomfort: growling, moving away, or stiffening',
+        'A happy dog will lean into your hand and wag their tail',
+        'Respect when a dog wants to be left alone',
+        'Each dog has different preferences - learn what your dog likes'
+      ],
+      imageSrc: '/mulliganDog.jpeg',
+      imageAlt: 'Person petting a dog'
+    },
+    affection: {
+      title: 'How to Tell if Your Dog Likes You',
+      summary: 'Signs your dog likes you include wagging tail, bringing you toys, following you around, leaning against you, and getting excited when you come home.',
+      bullets: [
+        'Wagging tail (especially a relaxed, full-body wag) shows happiness',
+        'Bringing you toys is a sign of trust and wanting to play',
+        'Following you around means they want to be near you',
+        'Leaning against you shows they feel safe and comfortable',
+        'Licking you is a sign of affection (dog kisses!)',
+        'Getting excited when you come home shows they missed you',
+        'A happy dog will have relaxed ears and a soft, open mouth',
+        'Dogs that show you their belly trust you completely'
+      ],
+      imageSrc: '/mulliganDog.jpeg',
+      imageAlt: 'Dog showing affection'
+    }
+  };
+
   return (
     <>
-      <Navbar />
-      
-      <div>
-        <header className="container">
-          <h1>Canine Companions (Dogs)</h1>
-          <p>dogs dogs dogs</p>
-        </header>
+      <header>
+        <div className="veryTop">
+          <div className="themeSwitch"><ThemeSwitcher/></div>
+          <div><Navbar/></div>
+        </div>
+        <h1>Canine Companions (Dogs)</h1>
+        <p>Click on a topic to learn more about caring for your dog</p>
+      </header>
 
-        <section>
-          <h2>Our Favorite Breeds</h2>
-          {/* content */}
-          <p>info about dogs</p>
+      <section className="container">
+        <div className="info-buttons-grid">
+          <button 
+            className="info-button"
+            onClick={() => setOpenModal('personalities')}
+          >
+            Dog Personalities and Traits
+          </button>
           
+          <button 
+            className="info-button"
+            onClick={() => setOpenModal('breeds')}
+          >
+            Dog Breeds and Lifespan
+          </button>
+          
+          <button 
+            className="info-button"
+            onClick={() => setOpenModal('feeding')}
+          >
+            What to Feed Your Dog
+          </button>
+          
+          <button 
+            className="info-button"
+            onClick={() => setOpenModal('petting')}
+          >
+            How to Pet a Dog
+          </button>
+          
+          <button 
+            className="info-button"
+            onClick={() => setOpenModal('affection')}
+          >
+            How to Tell if Your Dog Likes You
+          </button>
+        </div>
+
+        {/* Interactive Anatomy Section */}
+        <InteractiveAnatomy
+          title="Basic Dog Anatomy"
+          imageSrc="/dogAnatomy.png"
+          imageAlt="Dog anatomy diagram showing different body parts"
+          anatomyParts={[
+            {
+              id: 'nose',
+              name: 'Nose',
+              description: 'Dogs have powerful senses of smell - much stronger than humans! They can detect scents we can\'t even imagine. Their nose has up to 300 million scent receptors compared to our 6 million.',
+              x: 52,
+              y: 12
+            },
+            {
+              id: 'ears',
+              name: 'Ears',
+              description: 'Excellent hearing helps dogs detect sounds we can\'t hear. Dogs can hear frequencies up to 65,000 Hz (humans only hear up to 20,000 Hz). Watch ear position to understand their mood!',
+              x: 25,
+              y: 10
+            },
+            {
+              id: 'eyes',
+              name: 'Eyes',
+              description: 'Good vision helps dogs see movement and navigate. They can see better in dim light than humans, but see fewer colors. Dogs have a wider field of vision - about 240 degrees!',
+              x: 40,
+              y: 15
+            },
+            {
+              id: 'jaws',
+              name: 'Strong Jaws',
+              description: 'Strong jaws are perfect for chewing toys and food. Dogs have 42 teeth - puppies have 28 baby teeth that fall out. Their jaw strength varies by breed.',
+              x: 48,
+              y: 22
+            },
+            {
+              id: 'heart',
+              name: 'Heart',
+              description: 'A dog\'s heart pumps blood throughout their body. Smaller dogs have faster heart rates (100-140 beats per minute) than larger dogs (60-100 beats per minute).',
+              x: 38,
+              y: 32
+            },
+            {
+              id: 'lungs',
+              name: 'Lungs',
+              description: 'Dogs breathe faster than humans - about 10-30 breaths per minute. Their lungs help bring oxygen to their body, especially important during exercise!',
+              x: 45,
+              y: 30
+            },
+            {
+              id: 'spine',
+              name: 'Spine',
+              description: 'A dog\'s spine is flexible and strong, allowing them to run, jump, and twist. It protects the spinal cord which sends messages between the brain and body.',
+              x: 35,
+              y: 28
+            },
+            {
+              id: 'stomach',
+              name: 'Stomach',
+              description: 'A dog\'s stomach is where food digestion begins. Dogs have shorter digestive tracts than humans, which is why they digest food faster.',
+              x: 42,
+              y: 45
+            },
+            {
+              id: 'legs',
+              name: 'Legs',
+              description: 'A dog\'s legs are powerful and built for running. The front legs carry about 60% of their weight, while the back legs provide propulsion for running and jumping.',
+              x: 35,
+              y: 58
+            },
+            {
+              id: 'paws',
+              name: 'Padded Paws',
+              description: 'Padded paws help dogs walk comfortably on different surfaces like hot pavement or rough terrain. The pads act like shock absorbers and provide grip.',
+              x: 32,
+              y: 85
+            },
+            {
+              id: 'tail',
+              name: 'Tail',
+              description: 'Tails help with balance and communication - watch the tail position to understand how your dog feels! A wagging tail doesn\'t always mean happy - it depends on the position and speed.',
+              x: 85,
+              y: 18
+            }
+          ]}
+        />
+        
+        <div style={{ marginTop: '2rem', textAlign: 'center' }}>
           <Link href="/pets">← Back to All Pets</Link>
-        </section>
-      </div>
+        </div>
+      </section>
+
+      {/* Modals */}
+      {openModal === 'personalities' && (
+        <InfoModal
+          isOpen={true}
+          onClose={() => setOpenModal(null)}
+          {...dogInfo.personalities}
+        />
+      )}
+      
+      {openModal === 'breeds' && (
+        <InfoModal
+          isOpen={true}
+          onClose={() => setOpenModal(null)}
+          {...dogInfo.breeds}
+        />
+      )}
+      
+      {openModal === 'feeding' && (
+        <InfoModal
+          isOpen={true}
+          onClose={() => setOpenModal(null)}
+          {...dogInfo.feeding}
+        />
+      )}
+      
+      {openModal === 'petting' && (
+        <InfoModal
+          isOpen={true}
+          onClose={() => setOpenModal(null)}
+          {...dogInfo.petting}
+        />
+      )}
+      
+      {openModal === 'affection' && (
+        <InfoModal
+          isOpen={true}
+          onClose={() => setOpenModal(null)}
+          {...dogInfo.affection}
+        />
+      )}
     </>
   );
 }

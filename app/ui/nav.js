@@ -21,13 +21,14 @@ export default function Navbar() {
       {/* --- NAVBAR --- */}
       <div id="myNav" className="overlay" style={navStyle}> 
         
-        <a 
-          href="javascript:void(0)" 
+        <button 
+          type="button"
           className="closebtn" 
           onClick={closeNav}
+          aria-label="Close navigation menu"
         >
           &times;
-        </a>
+        </button>
     
         {/* Overlay content */}
         <div className="overlay-content">

@@ -2,15 +2,16 @@ import './stylesPets.css';
 import Navbar from '../ui/nav';
 import ThemeSwitcher from '../ui/themeSwitcher';
 import Link from 'next/link';
+import Image from 'next/image';
+
+export const metadata = {
+  title: 'Nearby Pets - Pet Hub',
+  description: 'Browse featured pets available for adoption at local animal shelters',
+};
 
 export default function PetsPage() {
   return (
     <div>
-      {/*Importing Fonts*/}
-      <style>
-        @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-      </style>
 
       {/* --- HEADINGS --- */}
       <header>
@@ -31,27 +32,50 @@ export default function PetsPage() {
           <h2>Featured Pets</h2>
 
           {/* CATS */}
-          <div className="gray">
-            <div className="pink">
+          <div className="pets-grid">
+            <div className="pet-card">
               Milton (M)
-              <img id="milton" src="miltonCat.jpeg"></img>
+              <Image 
+                id="milton" 
+                src="/miltonCat.jpeg" 
+                alt="Milton, a male cat available for adoption"
+                width={200}
+                height={200}
+              />
             </div>
-            <div className="pink">
+            <div className="pet-card">
               Jellybean (F)
-              <img id="jellybean" src="jellybeanCat.jpeg"></img>
+              <Image 
+                id="jellybean" 
+                src="/jellybeanCat.jpeg" 
+                alt="Jellybean, a female cat available for adoption"
+                width={200}
+                height={200}
+                style={{ objectPosition: '0 -60px' }}
+              />
             </div>
-            <div className="pink">
+            <div className="pet-card">
               Wilson (M)
-              <img id="wilson" src="wilsonCat.jpeg"></img>
+              <Image 
+                id="wilson" 
+                src="/wilsonCat.jpeg" 
+                alt="Wilson, a male cat available for adoption"
+                width={200}
+                height={200}
+              />
             </div>
           </div>
 
-          <div>
-            <h3><Link href="/pets/dogs">View Dogs</Link></h3>
-            <p>Find information and photos of all our canine companions.</p>
+          <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '2rem' }}>
+            <div>
+              <h3><Link href="/pets/cats">View Cats</Link></h3>
+              <p>Learn about feline care, diets, and behaviors.</p>
+            </div>
+            <div>
+              <h3><Link href="/pets/dogs">View Dogs</Link></h3>
+              <p>Learn about canine care, diets, and behaviors.</p>
+            </div>
           </div>
-          
-          {/* add stuff here */}
 
         </section>
 
