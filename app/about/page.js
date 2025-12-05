@@ -27,12 +27,12 @@ export default function AboutPage() {
            {/* TODO: i want to move the paragraph to the side or smth? then a picture
             on the right or smth to fill the space*/}
           <p>
-            We created this website, because we believe every child should learn how to
+            We created this website because we believe every child should learn how to
             care for animals with confidence and kindness.<br></br><br></br>Growing up,
             many of us loved pets but didn’t always know how to keep them
             healthy or understand their bodies. We wished to build a fun,
-            easy-to-learn space where kids can explore animal anatomy; discover
-            how different pets live; and learn the basics of responsible care. Our
+            easy-to-learn space where kids can explore animal anatomy, discover
+            how different pets live, and learn the basics of responsible care. Our
             goal is to make education engaging, accessible, and full of curiosity – just
             like animals themselves!
           </p>
