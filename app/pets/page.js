@@ -36,7 +36,7 @@ export default function PetsPage() {
         <section>
           <h2 className="biggerH2">Featured Pets</h2>
 
-          <h2>Feline Friends</h2>
+          <h2><a href="/pets/cats">Feline Friends</a></h2>
           {/* CATS */}
           <div className="petCategory">
             <a className="petIndividual" target="_blank" href="https://sdhumane.org/adopt/available-pets/animal-single/?petId=963403">
@@ -53,7 +53,7 @@ export default function PetsPage() {
             </a>
           </div>
 
-          <h2>Canine Companions</h2>
+          <h2><a href="/pets/dogs">Canine Companions</a></h2>
           {/* DOGS */}
           <div className="petCategory">
             <a className="petIndividual" target="_blank" href="https://sdhumane.org/adopt/available-pets/animal-single/?petId=966991">
