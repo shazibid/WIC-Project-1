@@ -122,7 +122,7 @@ export default function DogsPage() {
   };
 
   return (
-    <>
+    <div className="page">
       <header>
         <div className="veryTop">
           <div className="themeSwitch"><ThemeSwitcher/></div>
@@ -256,7 +256,7 @@ export default function DogsPage() {
           ]}
         />
         
-        <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+        <div id="backToPetsBtn">
           <Link href="/pets">← Back to All Pets</Link>
         </div>
       </section>
@@ -301,6 +301,6 @@ export default function DogsPage() {
           {...dogInfo.affection}
         />
       )}
-    </>
+    </div>
   );
 }

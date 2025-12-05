@@ -223,8 +223,8 @@ export default function CatsPage() {
           ]}
         />
         
-        <div style={{ marginTop: '2rem', textAlign: 'center' }}>
-          <Link href="/pets">← Back to All Pets</Link>
+        <div id="backToPetsBtn">
+          <a href="/pets">← Back to All Pets</a>
         </div>
       </section>
 
