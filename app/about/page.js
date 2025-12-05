@@ -49,14 +49,15 @@ export default function AboutPage() {
             and care for the pets in their lives.
           </p>
           {/* add image of persons face */}
-          <p>Nicole Fong | <em>Role</em></p>
+          <p>Nicole Fong | <em>Lead Frontend Engineer</em></p>
           <ul>
             <li>Set up website template.</li>
-            <li>Installed Next JS dependencies and organization.</li>
+            <li>Installed Next JS dependencies and Vercel deployment.</li>
+            <li>Created interactive animal anatomy.</li>
           </ul>
 
           {/* add image of persons face */}
-          <p>Hannah Pham | <em>Teammate</em></p>
+          <p>Hannah Pham | <em>Lead Design</em></p>
           <ul>
             <li>Determined the website's color palette and font theme.</li>
             <li>Conducted online research on feline and canine health.</li>
