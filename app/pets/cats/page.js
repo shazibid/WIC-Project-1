@@ -117,14 +117,14 @@ export default function CatsPage() {
   };
 
   return (
-    <>
+    <div className="page">
       <header>
         <div className="veryTop">
           <div className="themeSwitch"><ThemeSwitcher/></div>
           <div><Navbar/></div>
         </div>
         <h1>Feline Friends (Cats)</h1>
-        <p>Click on a topic to learn more about caring for your cat</p>
+        <p>Click on a topic to learn more about caring for your cat!</p>
       </header>
 
       <section className="container">
@@ -268,7 +268,7 @@ export default function CatsPage() {
           {...catInfo.affection}
         />
       )}
-    </>
+    </div>
   );
 }
 

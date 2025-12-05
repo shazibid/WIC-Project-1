@@ -129,7 +129,7 @@ export default function DogsPage() {
           <div><Navbar/></div>
         </div>
         <h1>Canine Companions (Dogs)</h1>
-        <p>Click on a topic to learn more about caring for your dog</p>
+        <p>Click on a topic to learn more about caring for your dog!</p>
       </header>
 
       <section className="container">

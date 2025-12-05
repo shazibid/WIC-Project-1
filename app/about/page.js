@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <>
+    <div className="page">
       <header>
         <div className="veryTop">
           <div className="themeSwitch"><ThemeSwitcher/></div>
@@ -27,13 +27,13 @@ export default function AboutPage() {
            {/* TODO: i want to move the paragraph to the side or smth? then a picture
             on the right or smth to fill the space*/}
           <p>
-            We created this website because we believe every child should learn how to
-            care for animals with confidence and kindness. Growing up,
+            We created this website, because we believe every child should learn how to
+            care for animals with confidence and kindness.<br></br><br></br>Growing up,
             many of us loved pets but didn’t always know how to keep them
-            healthy or understand their bodies. So we wanted to build a fun,
-            easy-to-learn space where kids can explore animal anatomy, discover
-            how different pets live, and learn the basics of responsible care. Our
-            goal is to make education engaging, accessible, and full of curiosity -- just
+            healthy or understand their bodies. We wished to build a fun,
+            easy-to-learn space where kids can explore animal anatomy; discover
+            how different pets live; and learn the basics of responsible care. Our
+            goal is to make education engaging, accessible, and full of curiosity – just
             like animals themselves!
           </p>
           
@@ -41,25 +41,26 @@ export default function AboutPage() {
           <h2>Meet the Team</h2>
           <p>
             We are students at the University of California, San Diego,
-            studying a variety of STEM majors, mainly Computer Science.
+            studying a variety of STEM majors, primarily Computer Science.
             Even though we spend most of our time coding, experimenting,
             and problem-solving, we all share a huge love for animals. Together,
             we combined our technical skills and creativity to build this educational
             website. We hope it inspires young learners to understand, appreciate,
-            and care for the pets in their lives
+            and care for the pets in their lives.
           </p>
           {/* add image of persons face */}
           <p>Nicole Fong | <em>Role</em></p>
           <ul>
-            <li>Set up website template</li>
-            <li>Installed Next JS dependencies and organization</li>
+            <li>Set up website template.</li>
+            <li>Installed Next JS dependencies and organization.</li>
           </ul>
 
           {/* add image of persons face */}
-          <p>Hannah | <em>Role</em></p>
+          <p>Hannah Pham | <em>Teammate</em></p>
           <ul>
-            <li>contribution 1</li>
-            <li>contribution 2</li>
+            <li>Determined the website's color palette and font theme.</li>
+            <li>Conducted online research on feline and canine health.</li>
+            <li>Organized and designed the layout of two pages.</li>
           </ul>
 
           {/* add image of persons face */}
@@ -84,6 +85,6 @@ export default function AboutPage() {
           </ul>
         </section>
       </div>
-    </>
+    </div>
   );
 }
