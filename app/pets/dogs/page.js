@@ -124,14 +124,14 @@ export default function DogsPage() {
   };
 
   return (
-    <>
+    <div className="page">
       <header>
         <div className="veryTop">
           <div className="themeSwitch"><ThemeSwitcher/></div>
           <div><Navbar/></div>
         </div>
-        <h1>Canine Companions (Dogs)</h1>
-        <p>Click on a topic to learn more about caring for your dog</p>
+        <h1 style={{fontSize: 60}}>Canine Companions (Dogs)</h1>
+        <p>Click on a topic to learn more about caring for your dog!</p>
       </header>
 
       <section className="container">
@@ -258,7 +258,7 @@ export default function DogsPage() {
           ]}
         />
         
-        <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+        <div id="backToPetsBtn">
           <Link href="/pets">← Back to All Pets</Link>
         </div>
       </section>
@@ -303,6 +303,6 @@ export default function DogsPage() {
           {...dogInfo.affection}
         />
       )}
-    </>
+    </div>
   );
 }

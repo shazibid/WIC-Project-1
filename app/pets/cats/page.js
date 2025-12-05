@@ -123,7 +123,7 @@ export default function CatsPage() {
           <div className="themeSwitch"><ThemeSwitcher/></div>
           <div><Navbar/></div>
         </div>
-        <h1>Feline Friends (Cats)</h1>
+        <h1 style={{fontSize: 60}}>Feline Friends (Cats)</h1>
         <p>Click on a topic to learn more about caring for your cat!</p>
       </header>
 
@@ -223,8 +223,8 @@ export default function CatsPage() {
           ]}
         />
         
-        <div style={{ marginTop: '2rem', textAlign: 'center' }}>
-          <Link href="/pets">← Back to All Pets</Link>
+        <div id="backToPetsBtn">
+          <a href="/pets">← Back to All Pets</a>
         </div>
       </section>
 
