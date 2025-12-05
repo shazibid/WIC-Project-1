@@ -11,7 +11,12 @@ export const metadata = {
 
 export default function PetsPage() {
   return (
-    <div>
+    <div className="page">
+      {/*Importing Fonts*/}
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+      </style>
 
       {/* --- HEADINGS --- */}
       <header>
@@ -29,64 +34,71 @@ export default function PetsPage() {
       <div>
         {/* --- PETS CONTENT --- */}
         <section>
-          <h2>Featured Pets</h2>
+          <h2 className="biggerH2">Featured Pets</h2>
 
+          <h2>Feline Friends</h2>
           {/* CATS */}
-          <div className="pets-grid">
-            <div className="pet-card">
+          <div className="petCategory">
+            <a className="petIndividual" target="_blank" href="https://sdhumane.org/adopt/available-pets/animal-single/?petId=963403">
               Milton (M)
-              <Image 
-                id="milton" 
-                src="/miltonCat.jpeg" 
-                alt="Milton, a male cat available for adoption"
-                width={200}
-                height={200}
-              />
-            </div>
-            <div className="pet-card">
+              <img id="milton" src="miltonCat.jpeg"></img>
+            </a>
+            <a className="petIndividual" target="_blank" href="https://sdhumane.org/adopt/available-pets/animal-single/?petId=140693">
               Jellybean (F)
-              <Image 
-                id="jellybean" 
-                src="/jellybeanCat.jpeg" 
-                alt="Jellybean, a female cat available for adoption"
-                width={200}
-                height={200}
-                style={{ objectPosition: '0 -60px' }}
-              />
-            </div>
-            <div className="pet-card">
+              <img id="jellybean" src="jellybeanCat.png"></img>
+            </a>
+            <a className="petIndividual" target="_blank" href="https://sdhumane.org/adopt/available-pets/animal-single/?petId=550244">
               Wilson (M)
-              <Image 
-                id="wilson" 
-                src="/wilsonCat.jpeg" 
-                alt="Wilson, a male cat available for adoption"
-                width={200}
-                height={200}
-              />
-            </div>
+              <img id="wilson" src="wilsonCat.jpeg"></img>
+            </a>
           </div>
 
-          <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '2rem' }}>
-            <div>
-              <h3><Link href="/pets/cats">View Cats</Link></h3>
-              <p>Learn about feline care, diets, and behaviors.</p>
-            </div>
-            <div>
-              <h3><Link href="/pets/dogs">View Dogs</Link></h3>
-              <p>Learn about canine care, diets, and behaviors.</p>
-            </div>
+          <h2>Canine Companions</h2>
+          {/* DOGS */}
+          <div className="petCategory">
+            <a className="petIndividual" target="_blank" href="https://sdhumane.org/adopt/available-pets/animal-single/?petId=966991">
+              Joey (M)
+              <img id="joey" src="joeyDog.png"></img>
+            </a>
+            <a className="petIndividual" target="_blank" href="https://sdhumane.org/adopt/available-pets/animal-single/?petId=945592">
+              Brie (F)
+              <img id="brie" src="brieDog.png"></img>
+            </a>
+            <a className="petIndividual" target="_blank" href="https://sdhumane.org/adopt/available-pets/animal-single?petId=954966">
+              Zoe (F)
+              <img id="zoe" src="zoeDog.jpeg"></img>
+            </a>
           </div>
 
         </section>
 
         {/* --- LINKS TO ANIMAL SHELTERS --- */}
         <section>
-          <h2>Local Animal Shelters</h2>
-          <p>
-            <a href="https://animalcenter.org/" target="_blank" rel="noopener noreferrer">
-              San Diego Animal Center 
-            </a> 
-          </p>
+          <h2 className="biggerH2">Local Animal Shelters</h2>
+
+          <a className="animalShelter" target="_blank" href="https://sdhumane.org/">
+            <img src="sanDiegoHumaneSociety.png"></img>
+            <p>
+              <h3>The San Diego Humane Society</h3>
+              Location:<br></br>- 5500 Gaines St, San Diego, CA 92110<br></br>
+              Hours:<br></br>- Monday: Closed<br></br>
+              - Wednesday: 10 AM to 2 PM<br></br>
+              - Others: 10 AM to 5 PM<br></br>
+              Phone Number:<br></br>
+              - +1 (619) 299-7012
+            </p>
+          </a>
+
+          <a className="animalShelter" target="_blank" href="https://pawsofcoronado.org/">
+            <img src="pawsOfCoronado.png"></img>
+            <p>
+              <h3>PAWS of Coronado</h3>
+              Location:<br></br>- 1395 1st St, Coronado, CA 92118<br></br>
+              Hours:<br></br>- Daily: 9 AM to 4 PM<br></br>
+              Phone Number:<br></br>
+              - +1 (619) 435-8247
+            </p>
+          </a>
         </section>
       </div>
     </div>

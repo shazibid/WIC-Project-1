@@ -12,7 +12,12 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <div>
+    <div className="page">
+      {/*Importing Fonts*/}
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+      </style>
 
       {/* --- HEADINGS --- */}
       <header>
@@ -27,14 +32,14 @@ export default function HomePage() {
         <h2>Not sure what's the best care for your pet? We got you.</h2>
 
         {/* Move "your-image.jpg" to "public" folder */}
-        <Image 
-          src="/homeBanner.jpeg"
-          alt="Pet Hub banner showing happy pets" 
+        <div className="homeImageBox">
+          <img 
+          src="homeBanner.jpeg"
+          alt="Header Image" 
           className="homeImage"
-          width={1200}
-          height={300}
-          priority
-        /> 
+          priority="true" //Load important image first
+          />
+        </div>
       </header>
 
       {/* --- MAIN CONTENT --- */}
@@ -78,7 +83,6 @@ export default function HomePage() {
         <br></br>Further research into a specific species is highly encouraged as
         every animal is different.
       </p>
-      {/* <p>What is this website trying to educate others on? Who is the audience?</p> */}
     </div>
   );
 }
