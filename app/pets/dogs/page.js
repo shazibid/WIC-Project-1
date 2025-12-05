@@ -128,7 +128,7 @@ export default function DogsPage() {
           <div className="themeSwitch"><ThemeSwitcher/></div>
           <div><Navbar/></div>
         </div>
-        <h1>Canine Companions (Dogs)</h1>
+        <h1 style={{fontSize: 60}}>Canine Companions (Dogs)</h1>
         <p>Click on a topic to learn more about caring for your dog!</p>
       </header>
 

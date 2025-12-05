@@ -256,4 +256,14 @@ h3 {
   top: 20px;
   right: 45px;
   font-size: 60px;
+  color: var(--color-primary);
+  background-color: var(--color-background);
+  border: 0;
+}
+
+.closebtn:hover {
+  color: var(--color-text-base);
+  background-color: var(--color-background);
+  border: 0;
+  cursor: pointer;
 }
