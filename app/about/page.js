@@ -27,12 +27,12 @@ export default function AboutPage() {
            {/* TODO: i want to move the paragraph to the side or smth? then a picture
             on the right or smth to fill the space*/}
           <p>
-            We created this website, because we believe every child should learn how to
+            We created this website because we believe every child should learn how to
             care for animals with confidence and kindness.<br></br><br></br>Growing up,
             many of us loved pets but didn’t always know how to keep them
             healthy or understand their bodies. We wished to build a fun,
-            easy-to-learn space where kids can explore animal anatomy; discover
-            how different pets live; and learn the basics of responsible care. Our
+            easy-to-learn space where kids can explore animal anatomy, discover
+            how different pets live, and learn the basics of responsible care. Our
             goal is to make education engaging, accessible, and full of curiosity – just
             like animals themselves!
           </p>
@@ -49,14 +49,15 @@ export default function AboutPage() {
             and care for the pets in their lives.
           </p>
           {/* add image of persons face */}
-          <p>Nicole Fong | <em>Role</em></p>
+          <p>Nicole Fong | <em>Lead Frontend Engineer</em></p>
           <ul>
             <li>Set up website template.</li>
-            <li>Installed Next JS dependencies and organization.</li>
+            <li>Installed Next JS dependencies and Vercel deployment.</li>
+            <li>Created interactive animal anatomy.</li>
           </ul>
 
           {/* add image of persons face */}
-          <p>Hannah Pham | <em>Teammate</em></p>
+          <p>Hannah Pham | <em>Lead Design</em></p>
           <ul>
             <li>Determined the website's color palette and font theme.</li>
             <li>Conducted online research on feline and canine health.</li>
