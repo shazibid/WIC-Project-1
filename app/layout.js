@@ -1,13 +1,5 @@
 import '../styles.css';
-
-// Need to create a component and move footer there, preferably not on this page.
-function Footer() {
-  return (
-    <footer>
-      <p className="wicFooter">Women in Computing (WIC) Fall 2025 Project Team 9</p>
-    </footer>
-  );
-}
+import Footer from './ui/footer';
 
 // Define RootLayout component.
 export default function RootLayout({ children }) {
@@ -18,10 +10,32 @@ export default function RootLayout({ children }) {
         can be overridden by specific page.js files.
       */}
       <head>
-        <title>Project Title</title>
+        <title>Pet Hub - Learn About Pet Care</title>
+        <meta name="description" content="Educational website for young pet owners to learn about pet diets, health, and behaviors" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet" />
       </head>
 
       <body>
+        {/* Apply theme immediately before React hydration to prevent flash */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  const savedTheme = localStorage.getItem('theme');
+                  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                  const shouldBeDark = savedTheme === 'dark' || (!savedTheme && systemPrefersDark);
+                  if (shouldBeDark) {
+                    document.body.classList.add('dark-mode');
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
 
         <main>
           {children} 

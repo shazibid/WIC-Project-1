@@ -2,6 +2,12 @@ import './stylesPets.css';
 import Navbar from '../ui/nav';
 import ThemeSwitcher from '../ui/themeSwitcher';
 import Link from 'next/link';
+import Image from 'next/image';
+
+export const metadata = {
+  title: 'Nearby Pets - Pet Hub',
+  description: 'Browse featured pets available for adoption at local animal shelters',
+};
 
 export default function PetsPage() {
   return (
@@ -63,6 +69,7 @@ export default function PetsPage() {
               <img id="zoe" src="zoeDog.jpeg"></img>
             </a>
           </div>
+
         </section>
 
         {/* --- LINKS TO ANIMAL SHELTERS --- */}
