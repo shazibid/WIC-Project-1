@@ -37,7 +37,7 @@ export default function CatsPage() {
         'Mixed breed cats (moggies) are just as wonderful as purebreds',
         'Regular vet checkups help ensure your cat lives a long, healthy life'
       ],
-      imageSrc: '/jellybeanCat.png',
+      imageSrc: '/jellybeanCat.jpeg',
       imageAlt: 'Different cat breeds'
     },
     feeding: {
@@ -95,7 +95,7 @@ export default function CatsPage() {
         'Don\'t continue petting if the cat shows any signs of wanting to stop',
         'Don\'t pet a cat that is eating, sleeping, or seems stressed'
       ],
-      imageSrc: '/jellybeanCat.png',
+      imageSrc: '/jellybeanCat.jpeg',
       imageAlt: 'Person petting a cat'
     },
     affection: {
@@ -161,7 +161,7 @@ export default function CatsPage() {
             className="info-button"
             onClick={() => setOpenModal('affection')}
           >
-            Signs Your Cat Likes You
+            How to Tell if Your Cat Likes You
           </button>
         </div>
 

@@ -228,7 +228,6 @@ h2:hover, h2:hover a{
 .modal-close-btn:hover {
     background-color: var(--color-surface);
     color: var(--color-primary);
-    border: 2px solid var(--color-text-base);
     transform: rotate(90deg);
 }
 
@@ -265,14 +264,12 @@ h2:hover, h2:hover a{
     overflow-y: auto;
 }
 
-.modal-title, .modal-title:hover {
+.modal-title {
     color: var(--color-primary);
-    background-color: var(--color-background);
     font-family: 'Chewy', sans-serif;
     font-size: 32px;
     margin: 0;
-    margin-bottom: calc(var(--spacing-unit));
-    margin-top: 20px;
+    margin-bottom: calc(var(--spacing-unit) * 2);
 }
 
 .modal-summary {

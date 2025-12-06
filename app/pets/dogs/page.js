@@ -41,7 +41,7 @@ export default function DogsPage() {
         'Research breeds before choosing to find one that fits your lifestyle',
         'Regular vet checkups help ensure your dog lives a long, healthy life'
       ],
-      imageSrc: '/zoeDog.jpeg',
+      imageSrc: '/mulliganDog.jpeg',
       imageAlt: 'Different dog breeds'
     },
     feeding: {
@@ -63,7 +63,7 @@ export default function DogsPage() {
         'Don\'t feed table scraps that may contain harmful ingredients',
         'Don\'t overfeed - follow portion guidelines to prevent obesity'
       ],
-      imageSrc: '/brieDog.png',
+      imageSrc: '/mulliganDog.jpeg',
       imageAlt: 'Dog eating food'
     },
     anatomy: {
@@ -101,7 +101,7 @@ export default function DogsPage() {
         'Don\'t stare directly into a dog\'s eyes - this can be seen as threatening',
         'Don\'t pet a dog that is eating, sleeping, or caring for puppies'
       ],
-      imageSrc: '/joeyDog.png',
+      imageSrc: '/mulliganDog.jpeg',
       imageAlt: 'Person petting a dog'
     },
     affection: {
@@ -118,7 +118,7 @@ export default function DogsPage() {
         'YES - Dogs that show you their belly trust you completely'
       ],
       donts: [],
-      imageSrc: '/zoeDog.jpeg',
+      imageSrc: '/mulliganDog.jpeg',
       imageAlt: 'Dog showing affection'
     }
   };
@@ -168,7 +168,7 @@ export default function DogsPage() {
             className="info-button"
             onClick={() => setOpenModal('affection')}
           >
-            Signs Your Dog Likes You
+            How to Tell if Your Dog Likes You
           </button>
         </div>
 
